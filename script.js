@@ -1,6 +1,30 @@
 let textfield = document.getElementById('inputfield')
 let addbtn = document.getElementById('addbtn')
+let contactlist = document.getElementById('contactlist')
 let fieldtext = 0
+
+async function getallcontacts() {
+    const allcontresp = await fetch(`api.json`)
+    const allcontdata = await allcontresp.json()
+    allcontdata.forEach(data => {
+
+        let contact = document.createElement('div')
+        contact.style.display ="flex"
+        contact.style.width ="400px"
+        contact.innerHTML = `
+              <div style="display: flex; flex-direction: column; ">
+                   <h3>${data.Name}</h3>
+                   <h4>${data.Phone}</h4>
+              </div>
+              <button type="button" style ="background-color : red; justify-self: end;">delete</button>
+        
+        `
+        contactlist.appendChild(contact)
+    })
+
+
+}
+
 async function getdata() {
     const response = await fetch(`api.json`)
     const data = await response.json()
@@ -22,6 +46,8 @@ async function getdata() {
 
 
 }
+
+getallcontacts()
 
 addbtn.addEventListener('click', () => {
     fieldtext = textfield.value;
