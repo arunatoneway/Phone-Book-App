@@ -1,5 +1,5 @@
 let textfield = document.getElementById('inputfield')
-let addbtn = document.getElementById('addbtn')
+let searchbtn = document.getElementById('searchbtn')
 let contactlist = document.getElementById('contactlist')
 let fieldtext = 0
 
@@ -49,7 +49,7 @@ async function getdata() {
 
 getallcontacts()
 
-addbtn.addEventListener('click', () => {
+searchbtn.addEventListener('click', () => {
     fieldtext = textfield.value;
     getdata();
 })
