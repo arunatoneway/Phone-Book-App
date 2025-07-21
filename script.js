@@ -9,14 +9,13 @@ async function getallcontacts() {
     allcontdata.forEach(data => {
 
         let contact = document.createElement('div')
-        contact.style.display ="flex"
-        contact.style.width ="400px"
+        contact.classList.add("contactelemnt")
         contact.innerHTML = `
-              <div style="display: flex; flex-direction: column; ">
+              <div style="display: flex; flex-direction: column;" >
                    <h3>${data.Name}</h3>
                    <h4>${data.Phone}</h4>
               </div>
-              <button type="button" style ="background-color : red; justify-self: end;">delete</button>
+              <button type="button" >delete</button>
         
         `
         contactlist.appendChild(contact)
