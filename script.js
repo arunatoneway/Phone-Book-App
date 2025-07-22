@@ -15,7 +15,7 @@ async function getallcontacts() {
                    <h3>${data.Name}</h3>
                    <h4>${data.Phone}</h4>
               </div>
-              <button type="button" >delete</button>
+              <button type="button" >Remove</button>
         
         `
         contactlist.appendChild(contact)
