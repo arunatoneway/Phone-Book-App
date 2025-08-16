@@ -46,29 +46,68 @@ header{
 }
 
 #inputfield{
-    width: 350px; 
+    width: 340px; 
     background-color: aqua;
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px;
+    padding: 10px;
+    
 }
+
 
 #searchbtn{
     justify-self: end;
+    background-color: black;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
 }
 .contactelemnt{
     display: flex;
     width: 370px;
     padding: 10px;
     margin: 5px;
-    background-color: rgb(127, 115, 100);
+    background-color: rgb(251, 251, 251);
     border-radius: 5px;
 
 }
 .contactelemnt div{
     width: 350px;
     
+    
 }
 .contactelemnt button{
     padding: 5px;
     border-radius: 12px;
     
-    background-color: rgb(210, 47, 10);
+    background-color: rgb(255, 0, 8);
+}
+
+#savebtn{
+    width: 80%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 1px 5px;
+    background-color: rgba(0, 255, 106, 0.558);
+}
+#contactform{
+    
+    background-color: rgba(0, 0, 0, 0.915);
+    padding: 10px;
+    border-radius: 12px;
+    color: bisque;
+    width: 33%;
+    margin: auto;
+    margin-top: 20px;
+    display: none;
+}
+#contactform input{
+    border: none;
+    border-radius: 5px;
+    background-color: aqua;
+    color: azure;
+    width: 80%;
+    height: 25px;
+    margin: 5px;
 }
